@@ -1,3 +1,9 @@
+import { Navbar } from "./components/navbar";
+
 export function App() {
-  return <div>Digi Platform</div>;
+  return (
+    <main>
+      <Navbar />
+    </main>
+  );
 }
