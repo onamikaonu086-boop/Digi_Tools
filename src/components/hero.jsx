@@ -21,9 +21,6 @@ export function Hero() {
           creating faster today.
         </p>
 
-        {/* Explore Link */}
-        <p className="text-primary font-semibold mb-8 cursor-pointer hover:underline">Explore Products</p>
-
         {/* Buttons */}
         <div className="flex gap-4 items-center">
           <ButtonPrimary>Explore Products</ButtonPrimary>
@@ -38,12 +35,6 @@ export function Hero() {
       {/* Right Image */}
       <div className="flex-1 hidden md:flex justify-end">
         <img src="/images/banner.png" alt="banner-image" />
-        {/* <div className="w-96 h-96 bg-linear-to-br from-gray-200 to-gray-300 rounded-2xl flex items-center justify-center">
-          <span className="text-gray-400 text-center">
-            <div className="text-6xl mb-4">🤖</div>
-            <div>Digital Workflow Image</div>
-          </span>
-        </div> */}
       </div>
     </section>
   );

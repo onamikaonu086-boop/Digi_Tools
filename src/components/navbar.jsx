@@ -9,7 +9,7 @@ export function Navbar() {
       <nav className="container px-4 mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
-            <h1 className="text-2xl font-bold text-primary">DigiTools</h1>
+            <h1 className="text-2xl font-bold text-primary cursor-pointer">DigiTools</h1>
           </div>
           <div className="hidden md:flex items-center space-x-6 text-sm text-gray-600">
             {NAV_LINK_ITEMS.map((item) => (
