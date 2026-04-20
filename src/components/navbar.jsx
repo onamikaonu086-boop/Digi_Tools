@@ -6,7 +6,7 @@ const NAV_LINK_ITEMS = ["Products", "Features", "Pricing", "Testimonials", "FAQ"
 export function Navbar() {
   return (
     <header className="w-full bg-white border-b border-neutral-200">
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="container px-4 mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
             <h1 className="text-2xl font-bold text-primary">DigiTools</h1>
