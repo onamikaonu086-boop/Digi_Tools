@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "./shared/button";
+import { useCart } from "../context/CartContext";
 import productsData from "../data/product.json";
 import { Cart } from "./cart";
 
@@ -50,6 +51,10 @@ function ProductList({ products }) {
 
 // ProductCard Component
 function ProductCard({ product }) {
+  const { addToCart, cartItems } = useCart();
+
+  const isAdded = cartItems.some((item) => item.id === product.id);
+
   const getTagColor = (tagType) => {
     const colors = {
       "best-seller": "bg-yellow-100 text-yellow-800",
@@ -57,6 +62,10 @@ function ProductCard({ product }) {
       new: "bg-green-100 text-green-800",
     };
     return colors[tagType] || "bg-gray-100 text-gray-800";
+  };
+
+  const handleAddToCart = () => {
+    addToCart(product);
   };
 
   return (
@@ -110,7 +119,9 @@ function ProductCard({ product }) {
       </ul>
 
       {/* Buy Button */}
-      <Button variant="primary">Buy Now</Button>
+      <Button onClick={handleAddToCart} variant={isAdded ? "success" : "primary"}>
+        {isAdded ? "✓ Added to Cart" : "Buy Now"}
+      </Button>
     </div>
   );
 }
