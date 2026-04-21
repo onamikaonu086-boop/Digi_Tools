@@ -3,6 +3,7 @@ import { Navbar } from "./components/navbar";
 import { Products } from "./components/products";
 import { Stats } from "./components/stats";
 import { Steps } from "./components/steps";
+import { Footer } from "./components/footer";
 import { CartProvider } from "./context/CartContext";
 
 export function App() {
@@ -12,9 +13,10 @@ export function App() {
         <Navbar />
         <Hero />
         <Stats />
-        <Products />
         <Steps />
+        <Products />
       </main>
+      <Footer />
     </CartProvider>
   );
 }
