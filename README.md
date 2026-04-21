@@ -1,16 +1,54 @@
-# React + Vite
+# 🛠️ DigiTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, premium digital tools marketplace built with React and Tailwind CSS. Browse, select, and purchase premium digital products including AI writing tools, design templates, stock assets, and more—all in one place.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+[**Visit DigiTools Live** →](https://oo-digitools.netlify.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📝 Description
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+DigiTools is a full-featured e-commerce platform designed for creators, professionals, and businesses. It provides easy access to a curated collection of premium digital products with an intuitive shopping experience. Users can browse through various tools, add items to their cart, and proceed to checkout. The platform features a responsive design, smooth animations, and a comprehensive cart management system powered by React Context API.
+
+## 🛠️ Technologies Used
+
+- **React 19** - UI library for building interactive components
+- **Vite** - Lightning-fast frontend build tool
+- **Tailwind CSS 4** - Utility-first CSS framework for beautiful, responsive design
+- **Lucide React** - Beautiful, consistent SVG icon library
+- **React Social Icons** - Social media icon components
+- **React Context API** - State management for cart functionality
+- **React Toastify** - Toast notifications for user feedback
+- **ESLint** - Code quality and consistency
+
+## ✨ Features
+
+### 🛒 **Smart Cart Management**
+
+- Add/remove products to cart with instant feedback
+- Real-time cart count in navbar badge
+- Calculate total price automatically
+- Clear all items functionality
+- Context API-based state management for seamless data flow
+
+### 📱 **Responsive Product Showcase**
+
+- Grid-based product display (1-3 columns based on screen size)
+- 6 curated premium products with icons, descriptions, and features
+- Tag system (Best Seller, Popular, New) with color-coded badges
+- Feature lists with checkmarks for each product
+- Product data stored in JSON for easy management
+
+### 🎨 **Beautiful UI/UX Design**
+
+- Modern, clean interface with gradient accents
+- Smooth transitions and hover effects
+- Fully responsive design (mobile, tablet, desktop)
+- Dark footer with organized link sections
+- Social media integration with automatic icon detection
+- 3-step onboarding guide with visual design
+- Statistics section showcasing company metrics
