@@ -3,6 +3,7 @@ import { Button } from "./shared/button";
 import { useCart } from "../context/CartContext";
 import productsData from "../data/product.json";
 import { Cart } from "./cart";
+import { toast } from "react-toastify";
 
 // Main Products Component
 export function Products() {
@@ -65,6 +66,13 @@ function ProductCard({ product }) {
   };
 
   const handleAddToCart = () => {
+    const alreadyInCart = cartItems.some((item) => item.id === product.id);
+
+    if (alreadyInCart) {
+      toast.info(`${product.name} is already in your cart.`);
+      return;
+    }
+    toast.success(`${product.name} added to cart!`);
     addToCart(product);
   };
 

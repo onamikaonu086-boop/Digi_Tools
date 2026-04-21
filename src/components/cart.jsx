@@ -1,15 +1,21 @@
+import { toast } from "react-toastify";
 import { useCart } from "../context/CartContext";
 import { Button } from "./shared/button";
 
 export function Cart() {
   const { cartItems, clearCart } = useCart();
 
+  const handleClearCart = () => {
+    clearCart();
+    toast.info("Cart cleared.");
+  };
+
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 border border-neutral-200">
       <div className="flex justify-between items-center mb-6">
         <h3 className="text-xl font-bold text-gray-900">Cart ({cartItems.length})</h3>
         {cartItems.length > 0 && (
-          <Button onClick={clearCart} variant="outline" className="text-sm px-3 py-1">
+          <Button onClick={handleClearCart} variant="outline" className="text-sm px-3 py-1">
             Clear All
           </Button>
         )}
@@ -21,6 +27,16 @@ export function Cart() {
 
 function CartBody() {
   const { cartItems, removeFromCart, clearCart, getTotalPrice } = useCart();
+
+  const handleRemoveCart = (id) => {
+    removeFromCart(id);
+    toast.info("Item removed from cart.");
+  };
+
+  const handleCheckout = () => {
+    clearCart();
+    toast.success("Checkout successful! Thank you for your purchase.");
+  };
 
   if (!cartItems.length) {
     return <p className="text-gray-500 text-center py-8">Your cart is empty</p>;
@@ -46,7 +62,7 @@ function CartBody() {
 
           {/* Remove Button */}
           <button
-            onClick={() => removeFromCart(item.id)}
+            onClick={() => handleRemoveCart(item.id)}
             className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
             aria-label="Remove from cart"
           >
@@ -67,7 +83,8 @@ function CartBody() {
           <span className="text-lg font-semibold text-gray-900">Total:</span>
           <span className="text-2xl font-bold text-primary">${getTotalPrice()}</span>
         </div>
-        <Button variant="primary" className="w-full" onClick={clearCart}>
+
+        <Button variant="primary" className="w-full" onClick={handleCheckout}>
           Proceed to Checkout
         </Button>
       </div>
