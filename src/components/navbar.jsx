@@ -1,5 +1,5 @@
 import { ShoppingCartIcon } from "lucide-react";
-import { ButtonPrimary } from "./shared/button";
+import { Button } from "./shared/button";
 
 const NAV_LINK_ITEMS = ["Products", "Features", "Pricing", "Testimonials", "FAQ"];
 
@@ -23,7 +23,7 @@ export function Navbar() {
             </button>
 
             <p className="text-sm text-gray-700 hover:text-gray-900 cursor-pointer">Login</p>
-            <ButtonPrimary>Get Started</ButtonPrimary>
+            <Button variant="primary">Get Started</Button>
           </div>
         </div>
       </nav>

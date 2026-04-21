@@ -1,7 +1,17 @@
-export function ButtonPrimary(props) {
-  return <button {...props} className="px-4 py-2 bg-primary text-white rounded-full shadow cursor-pointer" />;
-}
+export function Button({ variant = "primary", className = "", ...props }) {
+  const baseStyles = "px-4 py-2 rounded-full cursor-pointer transition-all";
 
-export function ButtonOutline(props) {
-  return <button {...props} className="px-4 py-2 border-2 border-primary text-primary rounded-full cursor-pointer hover:bg-primary hover:text-white transition-colors" />;
+  const variantStyles = {
+    primary: `${baseStyles} bg-primary text-white shadow hover:shadow-lg`,
+    outline: `${baseStyles} border-2 border-primary text-primary hover:bg-primary hover:text-white`,
+  };
+
+  const styles = variantStyles[variant] || variantStyles.primary;
+
+  return (
+    <button
+      {...props}
+      className={`${styles} ${className}`}
+    />
+  );
 }

@@ -1,4 +1,4 @@
-import { ButtonPrimary, ButtonOutline } from "./shared/button";
+import { Button } from "./shared/button";
 
 export function Hero() {
   return (
@@ -23,12 +23,12 @@ export function Hero() {
 
         {/* Buttons */}
         <div className="flex gap-4 items-center">
-          <ButtonPrimary>Explore Products</ButtonPrimary>
-          <ButtonOutline>
+          <Button variant="primary">Explore Products</Button>
+          <Button variant="outline">
             <span className="flex items-center gap-2">
               <span>▶</span> Watch Demo
             </span>
-          </ButtonOutline>
+          </Button>
         </div>
       </div>
 
